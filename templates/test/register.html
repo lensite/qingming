@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{{ url_for('result') }}" method="post">
+    <div class="form-group">
+        <label>groupname</label>
+        <div>
+            <input type="text" name="user" .  mm                                                             nclass="form-control" required data-parsley-minlength="6" placeholder="Min 6 chars."/>
+        </div>
+    </div>
+    <div class="form-group mb-0">
+        <div>
+            <button type="submit" class="btn btn-primary waves-effect waves-light mr-1">
+                Submit
+            </button>
+            <button type="reset" class="btn btn-secondary waves-effect">
+                Cancel
+            </button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
