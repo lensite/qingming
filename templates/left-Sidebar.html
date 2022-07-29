@@ -12,7 +12,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Calendar </span></a>
+                    <a href="{{ url_for('groupList') }}" class="waves-effect"><i class="ti-calendar"></i><span> 主机分组 </span></a>
                 </li>
 
                 <li>
@@ -27,9 +27,9 @@
                 <li class="menu-title">Components</li>
 
                 <li>
-                    <a href="javascript:void(0);" class="waves-effect"><i class="ti-package"></i> <span> UI Elements <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="ti-package"></i> <span> 任务 <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
                     <ul class="submenu mm-collapse">
-                        <li><a href="ui-alerts.html">Alerts</a></li>
+                        <li><a href="{{ url_for('taskMysql') }}">mysql</a></li>
                         <li><a href="ui-buttons.html">Buttons</a></li>
                         <li><a href="ui-cards.html">Cards</a></li>
                         <li><a href="ui-carousel.html">Carousel</a></li>

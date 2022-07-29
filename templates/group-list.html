@@ -10,14 +10,12 @@
         <meta content="Themesbrand" name="author" />
         <link rel="shortcut icon" href="{{url_for('static',filename='assets/images/favicon.ico')}}">
 
-        <!--Chartist Chart CSS -->
-        <link rel="stylesheet" href="{{url_for('static',filename='assets/css/chartist.min.css')}}">
-
         <link href="{{url_for('static',filename='assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
         <link href="{{url_for('static',filename='assets/css/metisMenu.min.css')}}" rel="stylesheet" type="text/css">
         <link href="{{url_for('static',filename='assets/css/icons.css')}}" rel="stylesheet" type="text/css">
         <link href="{{url_for('static',filename='assets/css/style.css')}}" rel="stylesheet" type="text/css">
     </head>
+
     <body>
 
         <!-- Begin page -->
@@ -131,9 +129,7 @@
                 </div>
                 <!-- content -->
 
-                <footer class="footer">
-                    © 2019 Veltrix <span class="d-none d-sm-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i> by <a href="https://www.php.cn/">Themesbrand</a></span>.
-                </footer>
+                {% include "footer.html" %}
 
             </div>
 
@@ -144,6 +140,7 @@
         </div>
         <!-- END wrapper -->
 
+
         <!-- jQuery  -->
         <script src="{{url_for('static',filename='assets/js/jquery.min.js')}}"></script>
         <script src="http://cdn.bootstrapmb.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -151,19 +148,17 @@
         <script src="{{url_for('static',filename='assets/js/jquery.slimscroll.js')}}"></script>
         <script src="{{url_for('static',filename='assets/js/waves.min.js')}}"></script>
 
-        <!--Chartist Chart-->
-        <script src="{{url_for('static',filename='assets/js/chartist.min.js')}}"></script>
-        <script src="{{url_for('static',filename='assets/js/chartist-plugin-tooltip.min.js')}}"></script>
+        <!-- Parsley js -->
+        <script src="{{url_for('static',filename='assets/js/parsley.min.js')}}"></script>
 
-        <!-- peity JS -->
-        <script src="{{url_for('static',filename='assets/js/jquery.peity.min.js')}}"></script>
+        <!-- App js -->
+        <script src="{{url_for('static',filename='assets/js/app.js')}}"></script>
 
-        <script src="{{url_for('static',filename='assets/pages/dashboard.js')}}"></script>
-
-        <!-- App js
-        <script src="assets/js/app.js"></script>
-        -->
-    
+        <script>
+            $(document).ready(function() {
+                $('form').parsley();
+            });
+        </script>
 
     </body>
 
