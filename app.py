@@ -10,7 +10,7 @@ url = "http://localhost:5001"
 
 @app.route('/group/info')
 def register():
-    return render_template("form-validation.html")
+    return render_template("group-info.html")
 
 
 @app.route('/group/list')
@@ -77,6 +77,10 @@ def hostInfo():
             api = parse.urljoin(url, '/api/v1/hosts/%s/groups/%s' % (host,groupname))
             req = requests.post(api)
         return redirect('/group/list')
+@app.route('/task/mysql', methods=["POST", "GET"])
+def taskMysql():
+    return render_template("task-mysql.html")
+
 
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>Veltrix - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <link rel="shortcut icon" href="{{url_for('static',filename='assets/images/favicon.ico')}}">
+
+        <link href="{{url_for('static',filename='assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{url_for('static',filename='assets/css/metisMenu.min.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{url_for('static',filename='assets/css/icons.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{url_for('static',filename='assets/css/style.css')}}" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+            {% include "top-bar.html" %}
+            <!-- Top Bar End -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            {% include "left-Sidebar.html" %}
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="page-title-box">
+                            <div class="row align-items-center">
+
+                                <div class="col-sm-6">
+                                    <h4 class="page-title">Form Validation</h4>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Veltrix</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Forms</a></li>
+                                        <li class="breadcrumb-item active">Form Validation</li>
+                                    </ol>
+
+                                </div>
+                                <div class="col-sm-6">
+
+                                    <div class="float-right d-none d-md-block">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle arrow-none waves-effect waves-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-settings mr-2"></i> Settings
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Separated link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h4 class="mt-0 header-title">添加GROUP</h4>
+                                        <p class="text-muted m-b-30 "></p>
+
+                                        <form action="{{ url_for('groupAdd') }}" method="post">
+
+                                            <div class="form-group">
+                                                <label>Groupname</label>
+                                                <div>
+                                                    <input type="text" class="form-control" required
+                                                            data-parsley-minlength="6" name="groupname"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-0">
+                                                <div>
+                                                    <button type="submit" class="btn btn-primary waves-effect waves-light mr-1">
+                                                        提交
+                                                    </button>
+                                                    <button type="reset" class="btn btn-secondary waves-effect">
+                                                        清空
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+
+
+                    </div>
+                    <!-- container-fluid -->
+
+                </div>
+                <!-- content -->
+
+                <footer class="footer">
+                    © 2019 Veltrix <span class="d-none d-sm-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i> by <a href="https://www.php.cn/">Themesbrand</a></span>.
+                </footer>
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+
+        <!-- jQuery  -->
+        <script src="{{url_for('static',filename='assets/js/jquery.min.js')}}"></script>
+        <script src="http://cdn.bootstrapmb.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="{{url_for('static',filename='assets/js/metisMenu.min.js')}}"></script>
+        <script src="{{url_for('static',filename='assets/js/jquery.slimscroll.js')}}"></script>
+        <script src="{{url_for('static',filename='assets/js/waves.min.js')}}"></script>
+
+        <!-- Parsley js -->
+        <script src="{{url_for('static',filename='assets/js/parsley.min.js')}}"></script>
+
+        <!-- App js -->
+        <script src="{{url_for('static',filename='assets/js/app.js')}}"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('form').parsley();
+            });
+        </script>
+
+    </body>
+
+</html>
